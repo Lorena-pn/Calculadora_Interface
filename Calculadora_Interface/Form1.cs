@@ -364,6 +364,8 @@ namespace Calculadora_Interface
 
             btC.Enabled = false;
 
+            btD.Enabled = false;
+
             btE.Enabled = false;
 
             btF.Enabled = false;
@@ -475,18 +477,25 @@ namespace Calculadora_Interface
                     Hexadecimal.Text = txtResultado_P.Text;
                     Bin_Label.Text = Hexa.Hexa_Bin(txtResultado_P.Text);
                     Octal_Label.Text = Hexa.Hexa_Octal(txtResultado_P.Text);
+                    Decimal.Text = Hexa.Hexa_Decimal(txtResultado_P.Text);
                     break;
                 case Conversao.Octal:
                     Octal_Label.Text = txtResultado_P.Text;
                     Bin_Label.Text = Octal.Octal_Bin(txtResultado_P.Text);
                     Hexadecimal.Text = Octal.Octal_Hexa(txtResultado_P.Text);
+                    Decimal.Text = Octal.Octal_Decimal(txtResultado_P.Text);
                     break;
                 case Conversao.Binario:
                     Bin_Label.Text = txtResultado_P.Text;
                     Octal_Label.Text = Binario.Bin_Octal(txtResultado_P.Text);
                     Hexadecimal.Text = Binario.Bin_Hexa(txtResultado_P.Text);
+                    Decimal.Text = Binario.Bin_Decimal(txtResultado_P.Text);
                     break;
                 case Conversao.Decimal:
+                    Decimal.Text = txtResultado_P.Text;
+                    Bin_Label.Text = Decimal_1.Decimal_Bin(txtResultado_P.Text);
+                    Hexadecimal.Text = Decimal_1.Decimal_Hexa(txtResultado_P.Text);
+                    Octal_Label.Text = Decimal_1.Decimal_Octal(txtResultado_P.Text);
                     break;
             }
         }
