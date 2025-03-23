@@ -30,31 +30,43 @@
         {
             tabela = new TabControl();
             tabPage2 = new TabPage();
+            Bin_Label = new Label();
+            BIN = new Label();
+            tbBinario = new Button();
+            Octal_Label = new Label();
+            Decimal = new Label();
+            Hexadecimal = new Label();
+            OCT = new Label();
+            DEC = new Label();
+            HEX = new Label();
+            btOctal = new Button();
+            btDecimal = new Button();
+            btHexadecimal = new Button();
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
+            bt9_P = new Button();
+            bt6_P = new Button();
+            bt3_P = new Button();
+            bt8_P = new Button();
+            bt5_P = new Button();
+            bt2_P = new Button();
+            bt7_P = new Button();
+            bt4_P = new Button();
+            bt1_P = new Button();
+            btF = new Button();
+            btE = new Button();
+            btD = new Button();
+            btC = new Button();
+            btB = new Button();
             button19 = new Button();
-            button20 = new Button();
-            button21 = new Button();
+            btIgual_P = new Button();
+            bt0_P = new Button();
             button22 = new Button();
-            button23 = new Button();
-            textBox1 = new TextBox();
+            btA = new Button();
+            txtResultado_P = new TextBox();
             tabPage1 = new TabPage();
             Logica = new Label();
             Limpar = new Button();
@@ -70,11 +82,11 @@
             bt7 = new Button();
             bt4 = new Button();
             bt1 = new Button();
-            btF = new Button();
-            btE = new Button();
-            btD = new Button();
-            btC = new Button();
-            btB = new Button();
+            F = new Button();
+            E = new Button();
+            D = new Button();
+            C = new Button();
+            B = new Button();
             Adicao = new Button();
             igual = new Button();
             bt0 = new Button();
@@ -126,7 +138,7 @@
             tabela.Controls.Add(tabPage2);
             tabela.Controls.Add(tabPage1);
             tabela.Controls.Add(tabPage3);
-            tabela.Location = new Point(12, 12);
+            tabela.Location = new Point(10, 12);
             tabela.Name = "tabela";
             tabela.SelectedIndex = 0;
             tabela.Size = new Size(531, 687);
@@ -134,38 +146,155 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(Bin_Label);
+            tabPage2.Controls.Add(BIN);
+            tabPage2.Controls.Add(tbBinario);
+            tabPage2.Controls.Add(Octal_Label);
+            tabPage2.Controls.Add(Decimal);
+            tabPage2.Controls.Add(Hexadecimal);
+            tabPage2.Controls.Add(OCT);
+            tabPage2.Controls.Add(DEC);
+            tabPage2.Controls.Add(HEX);
+            tabPage2.Controls.Add(btOctal);
+            tabPage2.Controls.Add(btDecimal);
+            tabPage2.Controls.Add(btHexadecimal);
             tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(button1);
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(button3);
             tabPage2.Controls.Add(button4);
-            tabPage2.Controls.Add(button5);
-            tabPage2.Controls.Add(button6);
-            tabPage2.Controls.Add(button7);
-            tabPage2.Controls.Add(button8);
-            tabPage2.Controls.Add(button9);
-            tabPage2.Controls.Add(button10);
-            tabPage2.Controls.Add(button11);
-            tabPage2.Controls.Add(button12);
-            tabPage2.Controls.Add(button13);
-            tabPage2.Controls.Add(button14);
-            tabPage2.Controls.Add(button15);
-            tabPage2.Controls.Add(button16);
-            tabPage2.Controls.Add(button17);
-            tabPage2.Controls.Add(button18);
+            tabPage2.Controls.Add(bt9_P);
+            tabPage2.Controls.Add(bt6_P);
+            tabPage2.Controls.Add(bt3_P);
+            tabPage2.Controls.Add(bt8_P);
+            tabPage2.Controls.Add(bt5_P);
+            tabPage2.Controls.Add(bt2_P);
+            tabPage2.Controls.Add(bt7_P);
+            tabPage2.Controls.Add(bt4_P);
+            tabPage2.Controls.Add(bt1_P);
+            tabPage2.Controls.Add(btF);
+            tabPage2.Controls.Add(btE);
+            tabPage2.Controls.Add(btD);
+            tabPage2.Controls.Add(btC);
+            tabPage2.Controls.Add(btB);
             tabPage2.Controls.Add(button19);
-            tabPage2.Controls.Add(button20);
-            tabPage2.Controls.Add(button21);
+            tabPage2.Controls.Add(btIgual_P);
+            tabPage2.Controls.Add(bt0_P);
             tabPage2.Controls.Add(button22);
-            tabPage2.Controls.Add(button23);
-            tabPage2.Controls.Add(textBox1);
+            tabPage2.Controls.Add(btA);
+            tabPage2.Controls.Add(txtResultado_P);
             tabPage2.Location = new Point(4, 34);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(523, 649);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Programador";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Bin_Label
+            // 
+            Bin_Label.AutoSize = true;
+            Bin_Label.Location = new Point(116, 185);
+            Bin_Label.Name = "Bin_Label";
+            Bin_Label.Size = new Size(0, 25);
+            Bin_Label.TabIndex = 92;
+            // 
+            // BIN
+            // 
+            BIN.AutoSize = true;
+            BIN.BackColor = Color.Transparent;
+            BIN.Location = new Point(22, 185);
+            BIN.Name = "BIN";
+            BIN.Size = new Size(40, 25);
+            BIN.TabIndex = 91;
+            BIN.Text = "BIN";
+            // 
+            // tbBinario
+            // 
+            tbBinario.Location = new Point(13, 177);
+            tbBinario.Name = "tbBinario";
+            tbBinario.Size = new Size(498, 38);
+            tbBinario.TabIndex = 93;
+            tbBinario.UseVisualStyleBackColor = true;
+            tbBinario.Click += tbBinario_Click;
+            // 
+            // Octal_Label
+            // 
+            Octal_Label.AutoSize = true;
+            Octal_Label.Location = new Point(116, 142);
+            Octal_Label.Name = "Octal_Label";
+            Octal_Label.Size = new Size(0, 25);
+            Octal_Label.TabIndex = 87;
+            // 
+            // Decimal
+            // 
+            Decimal.AutoSize = true;
+            Decimal.Location = new Point(116, 98);
+            Decimal.Name = "Decimal";
+            Decimal.Size = new Size(0, 25);
+            Decimal.TabIndex = 86;
+            // 
+            // Hexadecimal
+            // 
+            Hexadecimal.AutoSize = true;
+            Hexadecimal.Location = new Point(116, 55);
+            Hexadecimal.Name = "Hexadecimal";
+            Hexadecimal.Size = new Size(0, 25);
+            Hexadecimal.TabIndex = 85;
+            // 
+            // OCT
+            // 
+            OCT.AutoSize = true;
+            OCT.Location = new Point(21, 141);
+            OCT.Name = "OCT";
+            OCT.Size = new Size(46, 25);
+            OCT.TabIndex = 84;
+            OCT.Text = "OCT";
+            // 
+            // DEC
+            // 
+            DEC.AutoSize = true;
+            DEC.Location = new Point(21, 98);
+            DEC.Name = "DEC";
+            DEC.Size = new Size(45, 25);
+            DEC.TabIndex = 83;
+            DEC.Text = "DEC";
+            // 
+            // HEX
+            // 
+            HEX.AutoSize = true;
+            HEX.Location = new Point(22, 55);
+            HEX.Name = "HEX";
+            HEX.Size = new Size(45, 25);
+            HEX.TabIndex = 82;
+            HEX.Text = "HEX";
+            // 
+            // btOctal
+            // 
+            btOctal.Location = new Point(14, 134);
+            btOctal.Name = "btOctal";
+            btOctal.Size = new Size(497, 39);
+            btOctal.TabIndex = 90;
+            btOctal.UseVisualStyleBackColor = true;
+            btOctal.Click += btOctal_Click;
+            // 
+            // btDecimal
+            // 
+            btDecimal.Location = new Point(14, 92);
+            btDecimal.Name = "btDecimal";
+            btDecimal.Size = new Size(497, 37);
+            btDecimal.TabIndex = 89;
+            btDecimal.UseVisualStyleBackColor = true;
+            btDecimal.Click += btDecimal_Click;
+            // 
+            // btHexadecimal
+            // 
+            btHexadecimal.Location = new Point(14, 49);
+            btHexadecimal.Name = "btHexadecimal";
+            btHexadecimal.Size = new Size(497, 37);
+            btHexadecimal.TabIndex = 88;
+            btHexadecimal.UseVisualStyleBackColor = true;
+            btHexadecimal.Click += btHexadecimal_Click;
             // 
             // label1
             // 
@@ -177,225 +306,248 @@
             // 
             // button1
             // 
-            button1.Location = new Point(416, 201);
+            button1.Location = new Point(416, 225);
             button1.Name = "button1";
-            button1.Size = new Size(95, 82);
+            button1.Size = new Size(95, 58);
             button1.TabIndex = 72;
             button1.Text = "CE";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += Limpar_Click;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.ActiveBorder;
             button2.Location = new Point(416, 289);
             button2.Name = "button2";
             button2.Size = new Size(95, 82);
             button2.TabIndex = 71;
             button2.Text = "/";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.ActiveBorder;
             button3.Location = new Point(416, 377);
             button3.Name = "button3";
             button3.Size = new Size(95, 82);
             button3.TabIndex = 70;
             button3.Text = "x";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.ActiveBorder;
             button4.Location = new Point(416, 465);
             button4.Name = "button4";
             button4.Size = new Size(95, 82);
             button4.TabIndex = 69;
             button4.Text = "-";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // bt9_P
             // 
-            button5.Location = new Point(315, 289);
-            button5.Name = "button5";
-            button5.Size = new Size(95, 82);
-            button5.TabIndex = 68;
-            button5.Text = "9";
-            button5.UseVisualStyleBackColor = true;
+            bt9_P.Location = new Point(315, 289);
+            bt9_P.Name = "bt9_P";
+            bt9_P.Size = new Size(95, 82);
+            bt9_P.TabIndex = 68;
+            bt9_P.Text = "9";
+            bt9_P.UseVisualStyleBackColor = true;
+            bt9_P.Click += bt9_Click;
             // 
-            // button6
+            // bt6_P
             // 
-            button6.Location = new Point(315, 377);
-            button6.Name = "button6";
-            button6.Size = new Size(95, 82);
-            button6.TabIndex = 67;
-            button6.Text = "6";
-            button6.UseVisualStyleBackColor = true;
+            bt6_P.Location = new Point(315, 377);
+            bt6_P.Name = "bt6_P";
+            bt6_P.Size = new Size(95, 82);
+            bt6_P.TabIndex = 67;
+            bt6_P.Text = "6";
+            bt6_P.UseVisualStyleBackColor = true;
+            bt6_P.Click += bt6_Click;
             // 
-            // button7
+            // bt3_P
             // 
-            button7.Location = new Point(315, 465);
-            button7.Name = "button7";
-            button7.Size = new Size(95, 82);
-            button7.TabIndex = 66;
-            button7.Text = "3";
-            button7.UseVisualStyleBackColor = true;
+            bt3_P.Location = new Point(315, 465);
+            bt3_P.Name = "bt3_P";
+            bt3_P.Size = new Size(95, 82);
+            bt3_P.TabIndex = 66;
+            bt3_P.Text = "3";
+            bt3_P.UseVisualStyleBackColor = true;
+            bt3_P.Click += bt3_Click;
             // 
-            // button8
+            // bt8_P
             // 
-            button8.Location = new Point(214, 289);
-            button8.Name = "button8";
-            button8.Size = new Size(95, 82);
-            button8.TabIndex = 65;
-            button8.Text = "8";
-            button8.UseVisualStyleBackColor = true;
+            bt8_P.Location = new Point(214, 289);
+            bt8_P.Name = "bt8_P";
+            bt8_P.Size = new Size(95, 82);
+            bt8_P.TabIndex = 65;
+            bt8_P.Text = "8";
+            bt8_P.UseVisualStyleBackColor = true;
+            bt8_P.Click += bt8_Click;
             // 
-            // button9
+            // bt5_P
             // 
-            button9.Location = new Point(214, 377);
-            button9.Name = "button9";
-            button9.Size = new Size(95, 82);
-            button9.TabIndex = 64;
-            button9.Text = "5";
-            button9.UseVisualStyleBackColor = true;
+            bt5_P.Location = new Point(214, 377);
+            bt5_P.Name = "bt5_P";
+            bt5_P.Size = new Size(95, 82);
+            bt5_P.TabIndex = 64;
+            bt5_P.Text = "5";
+            bt5_P.UseVisualStyleBackColor = true;
+            bt5_P.Click += bt5_Click;
             // 
-            // button10
+            // bt2_P
             // 
-            button10.Location = new Point(214, 465);
-            button10.Name = "button10";
-            button10.Size = new Size(95, 82);
-            button10.TabIndex = 63;
-            button10.Text = "2";
-            button10.UseVisualStyleBackColor = true;
+            bt2_P.Location = new Point(214, 465);
+            bt2_P.Name = "bt2_P";
+            bt2_P.Size = new Size(95, 82);
+            bt2_P.TabIndex = 63;
+            bt2_P.Text = "2";
+            bt2_P.UseVisualStyleBackColor = true;
+            bt2_P.Click += bt2_Click;
             // 
-            // button11
+            // bt7_P
             // 
-            button11.Location = new Point(113, 289);
-            button11.Name = "button11";
-            button11.Size = new Size(95, 82);
-            button11.TabIndex = 62;
-            button11.Text = "7";
-            button11.UseVisualStyleBackColor = true;
+            bt7_P.Location = new Point(113, 289);
+            bt7_P.Name = "bt7_P";
+            bt7_P.Size = new Size(95, 82);
+            bt7_P.TabIndex = 62;
+            bt7_P.Text = "7";
+            bt7_P.UseVisualStyleBackColor = true;
+            bt7_P.Click += bt7_Click;
             // 
-            // button12
+            // bt4_P
             // 
-            button12.Location = new Point(113, 377);
-            button12.Name = "button12";
-            button12.Size = new Size(95, 82);
-            button12.TabIndex = 61;
-            button12.Text = "4";
-            button12.UseVisualStyleBackColor = true;
+            bt4_P.Location = new Point(113, 377);
+            bt4_P.Name = "bt4_P";
+            bt4_P.Size = new Size(95, 82);
+            bt4_P.TabIndex = 61;
+            bt4_P.Text = "4";
+            bt4_P.UseVisualStyleBackColor = true;
+            bt4_P.Click += bt4_Click;
             // 
-            // button13
+            // bt1_P
             // 
-            button13.Location = new Point(113, 465);
-            button13.Name = "button13";
-            button13.Size = new Size(95, 82);
-            button13.TabIndex = 60;
-            button13.Text = "1";
-            button13.UseVisualStyleBackColor = true;
+            bt1_P.Location = new Point(113, 465);
+            bt1_P.Name = "bt1_P";
+            bt1_P.Size = new Size(95, 82);
+            bt1_P.TabIndex = 60;
+            bt1_P.Text = "1";
+            bt1_P.UseVisualStyleBackColor = true;
+            bt1_P.Click += bt1_Click;
             // 
-            // button14
+            // btF
             // 
-            button14.BackColor = SystemColors.ActiveBorder;
-            button14.Location = new Point(113, 201);
-            button14.Name = "button14";
-            button14.Size = new Size(95, 82);
-            button14.TabIndex = 59;
-            button14.Text = "F";
-            button14.UseVisualStyleBackColor = false;
+            btF.BackColor = Color.Transparent;
+            btF.Location = new Point(113, 225);
+            btF.Name = "btF";
+            btF.Size = new Size(95, 58);
+            btF.TabIndex = 59;
+            btF.Text = "F";
+            btF.UseVisualStyleBackColor = false;
+            btF.Click += btF_Click;
             // 
-            // button15
+            // btE
             // 
-            button15.BackColor = SystemColors.ActiveBorder;
-            button15.Location = new Point(12, 201);
-            button15.Name = "button15";
-            button15.Size = new Size(95, 82);
-            button15.TabIndex = 58;
-            button15.Text = "E";
-            button15.UseVisualStyleBackColor = false;
+            btE.BackColor = Color.Transparent;
+            btE.Location = new Point(12, 225);
+            btE.Name = "btE";
+            btE.Size = new Size(95, 58);
+            btE.TabIndex = 58;
+            btE.Text = "E";
+            btE.UseVisualStyleBackColor = false;
+            btE.Click += btE_Click;
             // 
-            // button16
+            // btD
             // 
-            button16.BackColor = SystemColors.ActiveBorder;
-            button16.Location = new Point(12, 289);
-            button16.Name = "button16";
-            button16.Size = new Size(95, 82);
-            button16.TabIndex = 57;
-            button16.Text = "D";
-            button16.UseVisualStyleBackColor = false;
+            btD.BackColor = Color.Transparent;
+            btD.Location = new Point(12, 289);
+            btD.Name = "btD";
+            btD.Size = new Size(95, 82);
+            btD.TabIndex = 57;
+            btD.Text = "D";
+            btD.UseVisualStyleBackColor = false;
+            btD.Click += btD_Click;
             // 
-            // button17
+            // btC
             // 
-            button17.BackColor = SystemColors.ActiveBorder;
-            button17.Location = new Point(12, 377);
-            button17.Name = "button17";
-            button17.Size = new Size(95, 82);
-            button17.TabIndex = 56;
-            button17.Text = "C";
-            button17.UseVisualStyleBackColor = false;
+            btC.BackColor = Color.Transparent;
+            btC.Location = new Point(12, 377);
+            btC.Name = "btC";
+            btC.Size = new Size(95, 82);
+            btC.TabIndex = 56;
+            btC.Text = "C";
+            btC.UseVisualStyleBackColor = false;
+            btC.Click += btC_Click;
             // 
-            // button18
+            // btB
             // 
-            button18.BackColor = SystemColors.ActiveBorder;
-            button18.Location = new Point(12, 465);
-            button18.Name = "button18";
-            button18.Size = new Size(95, 82);
-            button18.TabIndex = 55;
-            button18.Text = "B";
-            button18.UseVisualStyleBackColor = false;
+            btB.BackColor = Color.Transparent;
+            btB.Location = new Point(12, 465);
+            btB.Name = "btB";
+            btB.Size = new Size(95, 82);
+            btB.TabIndex = 55;
+            btB.Text = "B";
+            btB.UseVisualStyleBackColor = false;
+            btB.Click += btB_Click;
             // 
             // button19
             // 
+            button19.BackColor = SystemColors.ActiveBorder;
             button19.Location = new Point(416, 553);
             button19.Name = "button19";
             button19.Size = new Size(95, 82);
             button19.TabIndex = 54;
             button19.Text = "+";
-            button19.UseVisualStyleBackColor = true;
+            button19.UseVisualStyleBackColor = false;
             // 
-            // button20
+            // btIgual_P
             // 
-            button20.Location = new Point(315, 553);
-            button20.Name = "button20";
-            button20.Size = new Size(95, 82);
-            button20.TabIndex = 53;
-            button20.Text = "=";
-            button20.UseVisualStyleBackColor = true;
+            btIgual_P.Location = new Point(315, 553);
+            btIgual_P.Name = "btIgual_P";
+            btIgual_P.Size = new Size(95, 82);
+            btIgual_P.TabIndex = 53;
+            btIgual_P.Text = "=";
+            btIgual_P.UseVisualStyleBackColor = true;
+            btIgual_P.Click += btIgual_P_Click;
             // 
-            // button21
+            // bt0_P
             // 
-            button21.Location = new Point(214, 553);
-            button21.Name = "button21";
-            button21.Size = new Size(95, 82);
-            button21.TabIndex = 52;
-            button21.Text = "0";
-            button21.UseVisualStyleBackColor = true;
+            bt0_P.Location = new Point(214, 553);
+            bt0_P.Name = "bt0_P";
+            bt0_P.Size = new Size(95, 82);
+            bt0_P.TabIndex = 52;
+            bt0_P.Text = "0";
+            bt0_P.UseVisualStyleBackColor = true;
+            bt0_P.Click += bt0_Click;
             // 
             // button22
             // 
+            button22.BackColor = SystemColors.ActiveBorder;
             button22.Location = new Point(113, 553);
             button22.Name = "button22";
             button22.Size = new Size(95, 82);
             button22.TabIndex = 51;
             button22.Text = ",";
-            button22.UseVisualStyleBackColor = true;
+            button22.UseVisualStyleBackColor = false;
             // 
-            // button23
+            // btA
             // 
-            button23.BackColor = SystemColors.ActiveBorder;
-            button23.Location = new Point(12, 553);
-            button23.Name = "button23";
-            button23.Size = new Size(95, 82);
-            button23.TabIndex = 50;
-            button23.Text = "button23";
-            button23.UseVisualStyleBackColor = false;
+            btA.BackColor = Color.Transparent;
+            btA.Location = new Point(12, 553);
+            btA.Name = "btA";
+            btA.Size = new Size(95, 82);
+            btA.TabIndex = 50;
+            btA.Text = "A";
+            btA.UseVisualStyleBackColor = false;
+            btA.Click += btA_Click;
             // 
-            // textBox1
+            // txtResultado_P
             // 
-            textBox1.Location = new Point(26, 9);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(474, 31);
-            textBox1.TabIndex = 73;
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            txtResultado_P.Location = new Point(26, 9);
+            txtResultado_P.Name = "txtResultado_P";
+            txtResultado_P.ReadOnly = true;
+            txtResultado_P.Size = new Size(474, 31);
+            txtResultado_P.TabIndex = 73;
+            txtResultado_P.TextAlign = HorizontalAlignment.Right;
             // 
             // tabPage1
             // 
@@ -413,11 +565,11 @@
             tabPage1.Controls.Add(bt7);
             tabPage1.Controls.Add(bt4);
             tabPage1.Controls.Add(bt1);
-            tabPage1.Controls.Add(btF);
-            tabPage1.Controls.Add(btE);
-            tabPage1.Controls.Add(btD);
-            tabPage1.Controls.Add(btC);
-            tabPage1.Controls.Add(btB);
+            tabPage1.Controls.Add(F);
+            tabPage1.Controls.Add(E);
+            tabPage1.Controls.Add(D);
+            tabPage1.Controls.Add(C);
+            tabPage1.Controls.Add(B);
             tabPage1.Controls.Add(Adicao);
             tabPage1.Controls.Add(igual);
             tabPage1.Controls.Add(bt0);
@@ -429,7 +581,7 @@
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(523, 649);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Basico";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // Logica
@@ -570,55 +722,55 @@
             bt1.UseVisualStyleBackColor = true;
             bt1.Click += bt1_Click;
             // 
-            // btF
+            // F
             // 
-            btF.BackColor = SystemColors.ActiveBorder;
-            btF.Location = new Point(112, 158);
-            btF.Name = "btF";
-            btF.Size = new Size(95, 82);
-            btF.TabIndex = 34;
-            btF.Text = "F";
-            btF.UseVisualStyleBackColor = false;
+            F.BackColor = SystemColors.ActiveBorder;
+            F.Location = new Point(112, 158);
+            F.Name = "F";
+            F.Size = new Size(95, 82);
+            F.TabIndex = 34;
+            F.Text = "F";
+            F.UseVisualStyleBackColor = false;
             // 
-            // btE
+            // E
             // 
-            btE.BackColor = SystemColors.ActiveBorder;
-            btE.Location = new Point(11, 158);
-            btE.Name = "btE";
-            btE.Size = new Size(95, 82);
-            btE.TabIndex = 33;
-            btE.Text = "E";
-            btE.UseVisualStyleBackColor = false;
+            E.BackColor = SystemColors.ActiveBorder;
+            E.Location = new Point(11, 158);
+            E.Name = "E";
+            E.Size = new Size(95, 82);
+            E.TabIndex = 33;
+            E.Text = "E";
+            E.UseVisualStyleBackColor = false;
             // 
-            // btD
+            // D
             // 
-            btD.BackColor = SystemColors.ActiveBorder;
-            btD.Location = new Point(11, 246);
-            btD.Name = "btD";
-            btD.Size = new Size(95, 82);
-            btD.TabIndex = 32;
-            btD.Text = "D";
-            btD.UseVisualStyleBackColor = false;
+            D.BackColor = SystemColors.ActiveBorder;
+            D.Location = new Point(11, 246);
+            D.Name = "D";
+            D.Size = new Size(95, 82);
+            D.TabIndex = 32;
+            D.Text = "D";
+            D.UseVisualStyleBackColor = false;
             // 
-            // btC
+            // C
             // 
-            btC.BackColor = SystemColors.ActiveBorder;
-            btC.Location = new Point(11, 334);
-            btC.Name = "btC";
-            btC.Size = new Size(95, 82);
-            btC.TabIndex = 31;
-            btC.Text = "C";
-            btC.UseVisualStyleBackColor = false;
+            C.BackColor = SystemColors.ActiveBorder;
+            C.Location = new Point(11, 334);
+            C.Name = "C";
+            C.Size = new Size(95, 82);
+            C.TabIndex = 31;
+            C.Text = "C";
+            C.UseVisualStyleBackColor = false;
             // 
-            // btB
+            // B
             // 
-            btB.BackColor = SystemColors.ActiveBorder;
-            btB.Location = new Point(11, 422);
-            btB.Name = "btB";
-            btB.Size = new Size(95, 82);
-            btB.TabIndex = 30;
-            btB.Text = "B";
-            btB.UseVisualStyleBackColor = false;
+            B.BackColor = SystemColors.ActiveBorder;
+            B.Location = new Point(11, 422);
+            B.Name = "B";
+            B.Size = new Size(95, 82);
+            B.TabIndex = 30;
+            B.Text = "B";
+            B.UseVisualStyleBackColor = false;
             // 
             // Adicao
             // 
@@ -678,7 +830,6 @@
             txtResultado.Size = new Size(474, 31);
             txtResultado.TabIndex = 48;
             txtResultado.TextAlign = HorizontalAlignment.Right;
-            txtResultado.Click += txtResultado_TextChanged;
             // 
             // tabPage3
             // 
@@ -720,7 +871,7 @@
             tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(523, 649);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "tabPage3";
+            tabPage3.Text = "Temperatura";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // Kelvin
@@ -1076,11 +1227,11 @@
         private Button bt7;
         private Button bt4;
         private Button bt1;
-        private Button btF;
-        private Button btE;
-        private Button btD;
-        private Button btC;
-        private Button btB;
+        private Button F;
+        private Button E;
+        private Button D;
+        private Button C;
+        private Button B;
         private Button Adicao;
         private Button igual;
         private Button bt0;
@@ -1093,26 +1244,26 @@
         private Button button2;
         private Button button3;
         private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Button button17;
-        private Button button18;
+        private Button bt9_P;
+        private Button bt6_P;
+        private Button bt3_P;
+        private Button bt8_P;
+        private Button bt5_P;
+        private Button bt2_P;
+        private Button bt7_P;
+        private Button bt4_P;
+        private Button bt1_P;
+        private Button btF;
+        private Button btE;
+        private Button btD;
+        private Button btC;
+        private Button btB;
         private Button button19;
-        private Button button20;
-        private Button button21;
+        private Button btIgual_P;
+        private Button bt0_P;
         private Button button22;
-        private Button button23;
-        private TextBox textBox1;
+        private Button btA;
+        private TextBox txtResultado_P;
         private TabPage tabPage3;
         private Button button24;
         private Button button25;
@@ -1147,5 +1298,17 @@
         private Button btKelvin;
         private Button btFahrenheit;
         private Button btCelsius;
+        private Label Bin_Label;
+        private Label BIN;
+        private Button tbBinario;
+        private Label Octal_Label;
+        private Label Decimal;
+        private Label Hexadecimal;
+        private Label OCT;
+        private Label DEC;
+        private Label HEX;
+        private Button btOctal;
+        private Button btDecimal;
+        private Button btHexadecimal;
     }
 }

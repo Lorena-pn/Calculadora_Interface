@@ -1,5 +1,6 @@
 using MARS.Models.Operações.Inteiro;
 using MARS.Models.Operações.Float;
+using MARS.Models.Conversões;
 using MARS.Models.Temperatura;
 namespace Calculadora_Interface
 {
@@ -22,6 +23,14 @@ namespace Calculadora_Interface
             Fahrenheit,
             Kelvin
         }
+        private Conversao ConversaoSelecionada { get; set; }
+        private enum Conversao
+        {
+            Hexadecimal,
+            Decimal,
+            Octal,
+            Binario
+        }
         public Calculadora()
         {
             InitializeComponent();
@@ -36,62 +45,101 @@ namespace Calculadora_Interface
         {
             txtResultado.Text += "0";
             txtResultado_T.Text += "0";
+            txtResultado_P.Text += "0";
         }
 
         private void bt1_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "1";
             txtResultado_T.Text += "1";
+            txtResultado_P.Text += "1";
+
         }
 
         private void bt2_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "2";
             txtResultado_T.Text += "2";
+            txtResultado_P.Text += "2";
         }
 
         private void bt3_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "3";
             txtResultado_T.Text += "3";
+            txtResultado_P.Text += "3";
         }
 
         private void bt4_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "4";
             txtResultado_T.Text += "4";
+            txtResultado_P.Text += "4";
         }
 
         private void bt5_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "5";
             txtResultado_T.Text += "5";
+            txtResultado_P.Text += "5";
         }
 
         private void bt6_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "6";
             txtResultado_T.Text += "6";
+            txtResultado_P.Text += "6";
         }
 
         private void bt7_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "7";
             txtResultado_T.Text += "7";
+            txtResultado_P.Text += "7";
         }
 
         private void bt8_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "8";
             txtResultado_T.Text += "8";
+            txtResultado_P.Text += "8";
         }
 
         private void bt9_Click(object sender, EventArgs e)
         {
             txtResultado.Text += "9";
             txtResultado_T.Text += "9";
+            txtResultado_P.Text += "9";
+        }
+        private void btA_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text += "A";
         }
 
+        private void btB_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text += "B";
+        }
+
+        private void btC_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text += "C";
+        }
+
+        private void btD_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text += "D";
+        }
+
+        private void btE_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text += "E";
+        }
+
+        private void btF_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text += "F";
+        }
         private void Adicao_Click(object sender, EventArgs e)
         {
             OperacaoSelecionada = Ope.Adicao;
@@ -136,6 +184,7 @@ namespace Calculadora_Interface
         {
             txtResultado.Text = "";
             txtResultado_T.Text = "";
+            txtResultado_P.Text = "";
             Logica.Text = "";
         }
 
@@ -162,11 +211,6 @@ namespace Calculadora_Interface
 
             Logica.Text = "=";
             txtResultado.Text = Resultado.ToString("0.##");
-        }
-
-        private void txtResultado_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btCelsius_Click(object sender, EventArgs e)
@@ -211,6 +255,238 @@ namespace Calculadora_Interface
                     Celsius.Text = fahrenheit_celsius.Operacao(float.Parse(txtResultado_T.Text));
                     Fahrenheit.Text = txtResultado_T.Text;
                     Kelvin.Text = fahrenheit_kelvin.Operacao(float.Parse(txtResultado_T.Text));
+                    break;
+            }
+        }
+
+        private void btHexadecimal_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text = "";
+
+            ConversaoSelecionada = Conversao.Hexadecimal;
+            HEX.Text = "|HEX";
+            DEC.Text = "DEC";
+            OCT.Text = "OCT";
+            BIN.Text = "BIN";
+
+            bt0_P.Enabled = true;
+            bt0_P.BackColor = Color.Transparent;
+
+            bt1_P.Enabled = true;
+            bt1_P.BackColor = Color.Transparent;
+
+            bt2_P.Enabled = true;
+            bt2_P.BackColor = Color.Transparent;
+
+            bt3_P.Enabled = true;
+            bt3_P.BackColor = Color.Transparent;
+
+            bt4_P.Enabled = true;
+            bt4_P.BackColor = Color.Transparent;
+
+            bt5_P.Enabled = true;
+            bt5_P.BackColor = Color.Transparent;
+
+            bt6_P.Enabled = true;
+            bt6_P.BackColor = Color.Transparent;
+
+            bt7_P.Enabled = true;
+            bt7_P.BackColor = Color.Transparent;
+
+            bt8_P.Enabled = true;
+            bt8_P.BackColor = Color.Transparent;
+
+            bt9_P.Enabled = true;
+            bt9_P.BackColor = Color.Transparent;
+
+            btA.Enabled = true;
+            btA.BackColor = Color.Transparent;
+
+            btB.Enabled = true;
+            btB.BackColor = Color.Transparent;
+
+            btC.Enabled = true;
+            btC.BackColor = Color.Transparent;
+
+            btD.Enabled = true;
+            btD.BackColor = Color.Transparent;
+
+            btE.Enabled = true;
+            btE.BackColor = Color.Transparent;
+
+            btF.Enabled = true;
+            btF.BackColor = Color.Transparent;
+        }
+
+        private void btDecimal_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text = "";
+
+            ConversaoSelecionada = Conversao.Decimal;
+            HEX.Text = "HEX";
+            DEC.Text = "|DEC";
+            OCT.Text = "OCT";
+            BIN.Text = "BIN";
+
+            bt0_P.Enabled = true;
+            bt0_P.BackColor = Color.Transparent;
+
+            bt1_P.Enabled = true;
+            bt1_P.BackColor = Color.Transparent;
+
+            bt2_P.Enabled = true;
+            bt2_P.BackColor = Color.Transparent;
+
+            bt3_P.Enabled = true;
+            bt3_P.BackColor = Color.Transparent;
+
+            bt4_P.Enabled = true;
+            bt4_P.BackColor = Color.Transparent;
+
+            bt5_P.Enabled = true;
+            bt5_P.BackColor = Color.Transparent;
+
+            bt6_P.Enabled = true;
+            bt6_P.BackColor = Color.Transparent;
+
+            bt7_P.Enabled = true;
+            bt7_P.BackColor = Color.Transparent;
+
+            bt8_P.Enabled = true;
+            bt8_P.BackColor = Color.Transparent;
+
+            bt9_P.Enabled = true;
+            bt9_P.BackColor = Color.Transparent;
+
+            btA.Enabled = false;
+
+            btB.Enabled = false;
+
+            btC.Enabled = false;
+
+            btE.Enabled = false;
+
+            btF.Enabled = false;
+
+        }
+
+        private void btOctal_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text = "";
+
+            ConversaoSelecionada = Conversao.Octal;
+            HEX.Text = "HEX";
+            DEC.Text = "DEC";
+            OCT.Text = "|OCT";
+            BIN.Text = "BIN";
+
+            bt0_P.Enabled = true;
+            bt0.BackColor = Color.Transparent;
+
+            bt1_P.Enabled = true;
+            bt1_P.BackColor = Color.Transparent;
+
+            bt2_P.Enabled = true;
+            bt2_P.BackColor = Color.Transparent;
+
+            bt3_P.Enabled = true;
+            bt3_P.BackColor = Color.Transparent;
+
+            bt4_P.Enabled = true;
+            bt4_P.BackColor = Color.Transparent;
+
+            bt5_P.Enabled = true;
+            bt5_P.BackColor = Color.Transparent;
+
+            bt6_P.Enabled = true;
+            bt6_P.BackColor = Color.Transparent;
+
+            bt7_P.Enabled = true;
+            bt7_P.BackColor = Color.Transparent;
+
+            bt8_P.Enabled = false;
+
+            bt9_P.Enabled = false;
+
+            btA.Enabled = false;
+
+            btB.Enabled = false;
+
+            btC.Enabled = false;
+
+            btD.Enabled = false;
+
+            btE.Enabled = false;
+
+            btF.Enabled = false;
+        }
+
+        private void tbBinario_Click(object sender, EventArgs e)
+        {
+            txtResultado_P.Text = "";
+
+            ConversaoSelecionada = Conversao.Binario;
+            HEX.Text = "HEX";
+            DEC.Text = "DEC";
+            OCT.Text = "OCT";
+            BIN.Text = "|BIN";
+
+            bt0_P.Enabled = true;
+            bt0.BackColor = Color.Transparent;
+
+            bt1_P.Enabled = true;
+            bt1_P.BackColor = Color.Transparent;
+
+            bt2_P.Enabled = false;
+
+            bt3_P.Enabled = false;
+
+            bt4_P.Enabled = false;
+
+            bt5_P.Enabled = false;
+
+            bt6_P.Enabled = false;
+
+            bt7_P.Enabled = false;
+
+            bt8_P.Enabled = false;
+
+            bt9_P.Enabled = false;
+
+            btA.Enabled = false;
+
+            btB.Enabled = false;
+
+            btC.Enabled = false;
+
+            btD.Enabled = false;
+
+            btE.Enabled = false;
+
+            btF.Enabled = false;
+        }
+
+        private void btIgual_P_Click(object sender, EventArgs e)
+        {
+            switch (ConversaoSelecionada)
+            {
+                case Conversao.Hexadecimal:
+
+                    Hexadecimal.Text = txtResultado_P.Text;
+                    Bin_Label.Text = Hexa.Hexa_Bin(txtResultado_P.Text);
+                    Octal_Label.Text = Hexa.Hexa_Octal(txtResultado_P.Text);
+                    break;
+                case Conversao.Octal:
+                    Octal_Label.Text = txtResultado_P.Text;
+                    Bin_Label.Text = Octal.Octal_Bin(txtResultado_P.Text);
+                    Hexadecimal.Text = Octal.Octal_Hexa(txtResultado_P.Text);
+                    break;
+                case Conversao.Binario:
+                    Bin_Label.Text = txtResultado_P.Text;
+                    Octal_Label.Text = Binario.Bin_Octal(txtResultado_P.Text);
+                    Hexadecimal.Text = Binario.Bin_Hexa(txtResultado_P.Text);
+                    break;
+                case Conversao.Decimal:
                     break;
             }
         }
