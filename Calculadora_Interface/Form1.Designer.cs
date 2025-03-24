@@ -68,6 +68,18 @@
             btA = new Button();
             txtResultado_P = new TextBox();
             tabPage1 = new TabPage();
+            label2 = new Label();
+            BIN_1 = new Label();
+            button5 = new Button();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            OCT_1 = new Label();
+            DEC_1 = new Label();
+            HEX_1 = new Label();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
             Logica = new Label();
             Limpar = new Button();
             Divisao = new Button();
@@ -551,6 +563,18 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(BIN_1);
+            tabPage1.Controls.Add(button5);
+            tabPage1.Controls.Add(label4);
+            tabPage1.Controls.Add(label5);
+            tabPage1.Controls.Add(label6);
+            tabPage1.Controls.Add(OCT_1);
+            tabPage1.Controls.Add(DEC_1);
+            tabPage1.Controls.Add(HEX_1);
+            tabPage1.Controls.Add(button6);
+            tabPage1.Controls.Add(button7);
+            tabPage1.Controls.Add(button8);
             tabPage1.Controls.Add(Logica);
             tabPage1.Controls.Add(Limpar);
             tabPage1.Controls.Add(Divisao);
@@ -584,19 +608,124 @@
             tabPage1.Text = "Basico";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(111, 191);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 25);
+            label2.TabIndex = 104;
+            // 
+            // BIN_1
+            // 
+            BIN_1.AutoSize = true;
+            BIN_1.BackColor = Color.Transparent;
+            BIN_1.Location = new Point(17, 191);
+            BIN_1.Name = "BIN_1";
+            BIN_1.Size = new Size(40, 25);
+            BIN_1.TabIndex = 103;
+            BIN_1.Text = "BIN";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(8, 183);
+            button5.Name = "button5";
+            button5.Size = new Size(498, 38);
+            button5.TabIndex = 105;
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += tbBinario_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(111, 148);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 25);
+            label4.TabIndex = 99;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(111, 104);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 25);
+            label5.TabIndex = 98;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(111, 61);
+            label6.Name = "label6";
+            label6.Size = new Size(0, 25);
+            label6.TabIndex = 97;
+            // 
+            // OCT_1
+            // 
+            OCT_1.AutoSize = true;
+            OCT_1.Location = new Point(16, 146);
+            OCT_1.Name = "OCT_1";
+            OCT_1.Size = new Size(46, 25);
+            OCT_1.TabIndex = 96;
+            OCT_1.Text = "OCT";
+            // 
+            // DEC_1
+            // 
+            DEC_1.AutoSize = true;
+            DEC_1.Location = new Point(16, 104);
+            DEC_1.Name = "DEC_1";
+            DEC_1.Size = new Size(45, 25);
+            DEC_1.TabIndex = 95;
+            DEC_1.Text = "DEC";
+            // 
+            // HEX_1
+            // 
+            HEX_1.AutoSize = true;
+            HEX_1.Location = new Point(17, 61);
+            HEX_1.Name = "HEX_1";
+            HEX_1.Size = new Size(45, 25);
+            HEX_1.TabIndex = 94;
+            HEX_1.Text = "HEX";
+            // 
+            // button6
+            // 
+            button6.Location = new Point(9, 139);
+            button6.Name = "button6";
+            button6.Size = new Size(497, 39);
+            button6.TabIndex = 102;
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += btOctal_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(9, 98);
+            button7.Name = "button7";
+            button7.Size = new Size(497, 37);
+            button7.TabIndex = 101;
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += btDecimal_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(9, 55);
+            button8.Name = "button8";
+            button8.Size = new Size(497, 37);
+            button8.TabIndex = 100;
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += btHexadecimal_Click;
+            // 
             // Logica
             // 
             Logica.AutoSize = true;
-            Logica.Location = new Point(24, 21);
+            Logica.Location = new Point(23, 19);
             Logica.Name = "Logica";
             Logica.Size = new Size(0, 25);
             Logica.TabIndex = 49;
             // 
             // Limpar
             // 
-            Limpar.Location = new Point(415, 158);
+            Limpar.Location = new Point(413, 227);
             Limpar.Name = "Limpar";
-            Limpar.Size = new Size(95, 82);
+            Limpar.Size = new Size(95, 64);
             Limpar.TabIndex = 47;
             Limpar.Text = "CE";
             Limpar.UseVisualStyleBackColor = true;
@@ -604,7 +733,7 @@
             // 
             // Divisao
             // 
-            Divisao.Location = new Point(415, 246);
+            Divisao.Location = new Point(413, 297);
             Divisao.Name = "Divisao";
             Divisao.Size = new Size(95, 82);
             Divisao.TabIndex = 46;
@@ -614,7 +743,7 @@
             // 
             // Multiplicacao
             // 
-            Multiplicacao.Location = new Point(415, 334);
+            Multiplicacao.Location = new Point(413, 385);
             Multiplicacao.Name = "Multiplicacao";
             Multiplicacao.Size = new Size(95, 82);
             Multiplicacao.TabIndex = 45;
@@ -624,7 +753,7 @@
             // 
             // Subtracao
             // 
-            Subtracao.Location = new Point(415, 422);
+            Subtracao.Location = new Point(413, 473);
             Subtracao.Name = "Subtracao";
             Subtracao.Size = new Size(95, 82);
             Subtracao.TabIndex = 44;
@@ -634,7 +763,7 @@
             // 
             // bt9
             // 
-            bt9.Location = new Point(314, 246);
+            bt9.Location = new Point(312, 297);
             bt9.Name = "bt9";
             bt9.Size = new Size(95, 82);
             bt9.TabIndex = 43;
@@ -644,7 +773,7 @@
             // 
             // bt6
             // 
-            bt6.Location = new Point(314, 334);
+            bt6.Location = new Point(312, 385);
             bt6.Name = "bt6";
             bt6.Size = new Size(95, 82);
             bt6.TabIndex = 42;
@@ -654,7 +783,7 @@
             // 
             // bt3
             // 
-            bt3.Location = new Point(314, 422);
+            bt3.Location = new Point(312, 473);
             bt3.Name = "bt3";
             bt3.Size = new Size(95, 82);
             bt3.TabIndex = 41;
@@ -664,7 +793,7 @@
             // 
             // bt8
             // 
-            bt8.Location = new Point(213, 246);
+            bt8.Location = new Point(211, 297);
             bt8.Name = "bt8";
             bt8.Size = new Size(95, 82);
             bt8.TabIndex = 40;
@@ -674,7 +803,7 @@
             // 
             // bt5
             // 
-            bt5.Location = new Point(213, 334);
+            bt5.Location = new Point(211, 385);
             bt5.Name = "bt5";
             bt5.Size = new Size(95, 82);
             bt5.TabIndex = 39;
@@ -684,7 +813,7 @@
             // 
             // bt2
             // 
-            bt2.Location = new Point(213, 422);
+            bt2.Location = new Point(211, 473);
             bt2.Name = "bt2";
             bt2.Size = new Size(95, 82);
             bt2.TabIndex = 38;
@@ -694,7 +823,7 @@
             // 
             // bt7
             // 
-            bt7.Location = new Point(112, 246);
+            bt7.Location = new Point(110, 297);
             bt7.Name = "bt7";
             bt7.Size = new Size(95, 82);
             bt7.TabIndex = 37;
@@ -704,7 +833,7 @@
             // 
             // bt4
             // 
-            bt4.Location = new Point(112, 334);
+            bt4.Location = new Point(110, 385);
             bt4.Name = "bt4";
             bt4.Size = new Size(95, 82);
             bt4.TabIndex = 36;
@@ -714,7 +843,7 @@
             // 
             // bt1
             // 
-            bt1.Location = new Point(112, 422);
+            bt1.Location = new Point(110, 473);
             bt1.Name = "bt1";
             bt1.Size = new Size(95, 82);
             bt1.TabIndex = 35;
@@ -724,28 +853,28 @@
             // 
             // F
             // 
-            F.BackColor = SystemColors.ActiveBorder;
-            F.Location = new Point(112, 158);
+            F.BackColor = Color.Transparent;
+            F.Location = new Point(110, 227);
             F.Name = "F";
-            F.Size = new Size(95, 82);
+            F.Size = new Size(95, 64);
             F.TabIndex = 34;
             F.Text = "F";
             F.UseVisualStyleBackColor = false;
             // 
             // E
             // 
-            E.BackColor = SystemColors.ActiveBorder;
-            E.Location = new Point(11, 158);
+            E.BackColor = Color.Transparent;
+            E.Location = new Point(9, 227);
             E.Name = "E";
-            E.Size = new Size(95, 82);
+            E.Size = new Size(95, 64);
             E.TabIndex = 33;
             E.Text = "E";
             E.UseVisualStyleBackColor = false;
             // 
             // D
             // 
-            D.BackColor = SystemColors.ActiveBorder;
-            D.Location = new Point(11, 246);
+            D.BackColor = Color.Transparent;
+            D.Location = new Point(9, 297);
             D.Name = "D";
             D.Size = new Size(95, 82);
             D.TabIndex = 32;
@@ -754,8 +883,8 @@
             // 
             // C
             // 
-            C.BackColor = SystemColors.ActiveBorder;
-            C.Location = new Point(11, 334);
+            C.BackColor = Color.Transparent;
+            C.Location = new Point(9, 385);
             C.Name = "C";
             C.Size = new Size(95, 82);
             C.TabIndex = 31;
@@ -764,8 +893,8 @@
             // 
             // B
             // 
-            B.BackColor = SystemColors.ActiveBorder;
-            B.Location = new Point(11, 422);
+            B.BackColor = Color.Transparent;
+            B.Location = new Point(9, 473);
             B.Name = "B";
             B.Size = new Size(95, 82);
             B.TabIndex = 30;
@@ -774,7 +903,7 @@
             // 
             // Adicao
             // 
-            Adicao.Location = new Point(415, 510);
+            Adicao.Location = new Point(413, 561);
             Adicao.Name = "Adicao";
             Adicao.Size = new Size(95, 82);
             Adicao.TabIndex = 29;
@@ -784,7 +913,7 @@
             // 
             // igual
             // 
-            igual.Location = new Point(314, 510);
+            igual.Location = new Point(312, 561);
             igual.Name = "igual";
             igual.Size = new Size(95, 82);
             igual.TabIndex = 28;
@@ -794,7 +923,7 @@
             // 
             // bt0
             // 
-            bt0.Location = new Point(213, 510);
+            bt0.Location = new Point(211, 561);
             bt0.Name = "bt0";
             bt0.Size = new Size(95, 82);
             bt0.TabIndex = 27;
@@ -804,18 +933,19 @@
             // 
             // btVirgula
             // 
-            btVirgula.Location = new Point(112, 510);
+            btVirgula.BackColor = Color.Transparent;
+            btVirgula.Location = new Point(110, 561);
             btVirgula.Name = "btVirgula";
             btVirgula.Size = new Size(95, 82);
             btVirgula.TabIndex = 26;
             btVirgula.Text = ",";
-            btVirgula.UseVisualStyleBackColor = true;
+            btVirgula.UseVisualStyleBackColor = false;
             btVirgula.Click += btVirgula_Click;
             // 
             // A
             // 
-            A.BackColor = SystemColors.ActiveBorder;
-            A.Location = new Point(11, 510);
+            A.BackColor = Color.Transparent;
+            A.Location = new Point(9, 561);
             A.Name = "A";
             A.Size = new Size(95, 82);
             A.TabIndex = 25;
@@ -824,7 +954,7 @@
             // 
             // txtResultado
             // 
-            txtResultado.Location = new Point(24, 18);
+            txtResultado.Location = new Point(23, 16);
             txtResultado.Name = "txtResultado";
             txtResultado.ReadOnly = true;
             txtResultado.Size = new Size(474, 31);
@@ -1310,5 +1440,17 @@
         private Button btOctal;
         private Button btDecimal;
         private Button btHexadecimal;
+        private Label label2;
+        private Label BIN_1;
+        private Button button5;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label OCT_1;
+        private Label DEC_1;
+        private Label HEX_1;
+        private Button button6;
+        private Button button7;
+        private Button button8;
     }
 }

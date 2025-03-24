@@ -114,31 +114,37 @@ namespace Calculadora_Interface
         private void btA_Click(object sender, EventArgs e)
         {
             txtResultado_P.Text += "A";
+            txtResultado.Text += "A";
         }
 
         private void btB_Click(object sender, EventArgs e)
         {
             txtResultado_P.Text += "B";
+            txtResultado.Text += "B";
         }
 
         private void btC_Click(object sender, EventArgs e)
         {
             txtResultado_P.Text += "C";
+            txtResultado.Text += "C";
         }
 
         private void btD_Click(object sender, EventArgs e)
         {
             txtResultado_P.Text += "D";
+            txtResultado.Text += "D";
         }
 
         private void btE_Click(object sender, EventArgs e)
         {
+            txtResultado.Text += "E";
             txtResultado_P.Text += "E";
         }
 
         private void btF_Click(object sender, EventArgs e)
         {
             txtResultado_P.Text += "F";
+            txtResultado.Text += "F";
         }
         private void Adicao_Click(object sender, EventArgs e)
         {
@@ -190,22 +196,53 @@ namespace Calculadora_Interface
 
         private void igual_Click(object sender, EventArgs e)
         {
-            float SegundoValor = float.Parse(txtResultado.Text);
 
-
-            switch (OperacaoSelecionada)
+            switch(ConversaoSelecionada)
             {
-                case Ope.Adicao:
-                    Resultado = Soma_F.Operacao(Valor, SegundoValor);
+                case Conversao.Hexadecimal:
+
+                    string Valor_1 = Hexa.Hexa_Decimal(Valor.ToString());
+                    string Valor_2 = Hexa.Hexa_Decimal(txtResultado.Text);
+
+                    switch (OperacaoSelecionada)
+                    {
+                        case Ope.Adicao:
+                            Resultado = Soma_F.Operacao(float.Parse(Valor_1), float.Parse(Valor_2));
+                            break;
+                        case Ope.Subtracao:
+                            Resultado = Diminuição_F.Operacao(float.Parse(Valor_1), float.Parse(Valor_2));
+                            break;
+                        case Ope.Divisao:
+                            Resultado = Divisão_F.Operacao(float.Parse(Valor_1), float.Parse(Valor_2));
+                            break;
+                        case Ope.Multiplicacao:
+                            Resultado = Multiplicação_F.Operacao(float.Parse(Valor_1), float.Parse(Valor_2));
+                            break;
+                    }
+
+                    Resultado = float.Parse(Decimal_1.Decimal_Hexa(Resultado.ToString()));
+
                     break;
-                case Ope.Subtracao:
-                    Resultado = Diminuição_F.Operacao(Valor, SegundoValor);
+                case Conversao.Decimal:
+                    switch (OperacaoSelecionada)
+                    {
+                        case Ope.Adicao:
+                            Resultado = Soma_F.Operacao(Valor, float.Parse(txtResultado.Text));
+                            break;
+                        case Ope.Subtracao:
+                            Resultado = Diminuição_F.Operacao(Valor, float.Parse(txtResultado.Text));
+                            break;
+                        case Ope.Divisao:
+                            Resultado = Divisão_F.Operacao(Valor, float.Parse(txtResultado.Text));
+                            break;
+                        case Ope.Multiplicacao:
+                            Resultado = Multiplicação_F.Operacao(Valor, float.Parse(txtResultado.Text));
+                            break;
+                    }
                     break;
-                case Ope.Divisao:
-                    Resultado = Divisão_F.Operacao(Valor, SegundoValor);
+                case Conversao.Binario:
                     break;
-                case Ope.Multiplicacao:
-                    Resultado = Multiplicação_F.Operacao(Valor, SegundoValor);
+                case Conversao.Octal:
                     break;
             }
 
@@ -269,6 +306,11 @@ namespace Calculadora_Interface
             OCT.Text = "OCT";
             BIN.Text = "BIN";
 
+            HEX_1.Text = "|HEX";
+            DEC_1.Text = "DEC";
+            OCT_1.Text = "OCT";
+            BIN_1.Text = "BIN";
+
             bt0_P.Enabled = true;
             bt0_P.BackColor = Color.Transparent;
 
@@ -316,6 +358,56 @@ namespace Calculadora_Interface
 
             btF.Enabled = true;
             btF.BackColor = Color.Transparent;
+
+            bt0.Enabled = true;
+            bt0.BackColor = Color.Transparent;
+
+            bt1.Enabled = true;
+            bt1.BackColor = Color.Transparent;
+
+            bt2.Enabled = true;
+            bt2.BackColor = Color.Transparent;
+
+            bt3.Enabled = true;
+            bt3.BackColor = Color.Transparent;
+
+            bt4.Enabled = true;
+            bt4.BackColor = Color.Transparent;
+
+            bt5.Enabled = true;
+            bt5.BackColor = Color.Transparent;
+
+            bt6.Enabled = true;
+            bt6.BackColor = Color.Transparent;
+
+            bt7.Enabled = true;
+            bt7.BackColor = Color.Transparent;
+
+            bt8.Enabled = true;
+            bt8.BackColor = Color.Transparent;
+
+            bt9.Enabled = true;
+            bt9.BackColor = Color.Transparent;
+
+            A.Enabled = true;
+            A.BackColor = Color.Transparent;
+
+            B.Enabled = true;
+            B.BackColor = Color.Transparent;
+
+            C.Enabled = true;
+            C.BackColor = Color.Transparent;
+
+            D.Enabled = true;
+            D.BackColor = Color.Transparent;
+
+            E.Enabled = true;
+            E.BackColor = Color.Transparent;
+
+            F.Enabled = true;
+            F.BackColor = Color.Transparent;
+
+            btVirgula.Enabled = false;
         }
 
         private void btDecimal_Click(object sender, EventArgs e)
@@ -327,6 +419,11 @@ namespace Calculadora_Interface
             DEC.Text = "|DEC";
             OCT.Text = "OCT";
             BIN.Text = "BIN";
+
+            HEX_1.Text = "HEX";
+            DEC_1.Text = "|DEC";
+            OCT_1.Text = "OCT";
+            BIN_1.Text = "BIN";
 
             bt0_P.Enabled = true;
             bt0_P.BackColor = Color.Transparent;
@@ -370,6 +467,51 @@ namespace Calculadora_Interface
 
             btF.Enabled = false;
 
+            bt0.Enabled = true;
+            bt0.BackColor = Color.Transparent;
+
+            bt1.Enabled = true;
+            bt1.BackColor = Color.Transparent;
+
+            bt2.Enabled = true;
+            bt2.BackColor = Color.Transparent;
+
+            bt3.Enabled = true;
+            bt3.BackColor = Color.Transparent;
+
+            bt4.Enabled = true;
+            bt4.BackColor = Color.Transparent;
+
+            bt5.Enabled = true;
+            bt5.BackColor = Color.Transparent;
+
+            bt6.Enabled = true;
+            bt6.BackColor = Color.Transparent;
+
+            bt7.Enabled = true;
+            bt7.BackColor = Color.Transparent;
+
+            bt8.Enabled = true;
+            bt8.BackColor = Color.Transparent;
+
+            bt9.Enabled = true;
+            bt9.BackColor = Color.Transparent;
+
+            A.Enabled = false;
+
+            B.Enabled = false;
+
+            C.Enabled = false;
+
+            D.Enabled = false;
+
+            E.Enabled = false;
+
+            F.Enabled = false;
+
+            btVirgula.Enabled = true;
+            btVirgula.BackColor = Color.Transparent;
+
         }
 
         private void btOctal_Click(object sender, EventArgs e)
@@ -381,6 +523,11 @@ namespace Calculadora_Interface
             DEC.Text = "DEC";
             OCT.Text = "|OCT";
             BIN.Text = "BIN";
+
+            HEX_1.Text = "HEX";
+            DEC_1.Text = "DEC";
+            OCT_1.Text = "|OCT";
+            BIN_1.Text = "BIN";
 
             bt0_P.Enabled = true;
             bt0.BackColor = Color.Transparent;
@@ -421,6 +568,49 @@ namespace Calculadora_Interface
             btE.Enabled = false;
 
             btF.Enabled = false;
+
+            bt0.Enabled = true;
+            bt0.BackColor = Color.Transparent;
+
+            bt1.Enabled = true;
+            bt1.BackColor = Color.Transparent;
+
+            bt2.Enabled = true;
+            bt2.BackColor = Color.Transparent;
+
+            bt3.Enabled = true;
+            bt3.BackColor = Color.Transparent;
+
+            bt4.Enabled = true;
+            bt4.BackColor = Color.Transparent;
+
+            bt5.Enabled = true;
+            bt5.BackColor = Color.Transparent;
+
+            bt6.Enabled = true;
+            bt6.BackColor = Color.Transparent;
+
+            bt7.Enabled = true;
+            bt7.BackColor = Color.Transparent;
+
+            bt8.Enabled = false;
+
+            bt9.Enabled = false;
+
+            A.Enabled = false;
+
+            B.Enabled = false;
+
+            C.Enabled = false;
+
+            D.Enabled = false;
+
+            E.Enabled = false;
+
+            F.Enabled = false;
+
+            btVirgula.Enabled = false;
+
         }
 
         private void tbBinario_Click(object sender, EventArgs e)
@@ -432,6 +622,11 @@ namespace Calculadora_Interface
             DEC.Text = "DEC";
             OCT.Text = "OCT";
             BIN.Text = "|BIN";
+
+            HEX_1.Text = "HEX";
+            DEC_1.Text = "DEC";
+            OCT_1.Text = "OCT";
+            BIN_1.Text = "|BIN";
 
             bt0_P.Enabled = true;
             bt0.BackColor = Color.Transparent;
@@ -466,6 +661,42 @@ namespace Calculadora_Interface
             btE.Enabled = false;
 
             btF.Enabled = false;
+
+            bt0.Enabled = true;
+            bt0.BackColor = Color.Transparent;
+
+            bt1.Enabled = true;
+            bt1.BackColor = Color.Transparent;
+
+            bt2.Enabled = false;
+
+            bt3.Enabled = false;
+
+            bt4.Enabled = false;
+
+            bt5.Enabled = false;
+
+            bt6.Enabled = false;
+
+            bt7.Enabled = false;
+
+            bt8.Enabled = false;
+
+            bt9.Enabled = false;
+
+            A.Enabled = false;
+
+            B.Enabled = false;
+
+            C.Enabled = false;
+
+            D.Enabled = false;
+
+            E.Enabled = false;
+
+            F.Enabled = false;
+
+            btVirgula.Enabled = false;
         }
 
         private void btIgual_P_Click(object sender, EventArgs e)
@@ -473,7 +704,6 @@ namespace Calculadora_Interface
             switch (ConversaoSelecionada)
             {
                 case Conversao.Hexadecimal:
-
                     Hexadecimal.Text = txtResultado_P.Text;
                     Bin_Label.Text = Hexa.Hexa_Bin(txtResultado_P.Text);
                     Octal_Label.Text = Hexa.Hexa_Octal(txtResultado_P.Text);
