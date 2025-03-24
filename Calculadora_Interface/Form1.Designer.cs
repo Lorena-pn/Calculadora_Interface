@@ -853,7 +853,7 @@
             // 
             // F
             // 
-            F.BackColor = Color.Transparent;
+            F.BackColor = SystemColors.ActiveBorder;
             F.Location = new Point(110, 227);
             F.Name = "F";
             F.Size = new Size(95, 64);
@@ -863,7 +863,7 @@
             // 
             // E
             // 
-            E.BackColor = Color.Transparent;
+            E.BackColor = SystemColors.ActiveBorder;
             E.Location = new Point(9, 227);
             E.Name = "E";
             E.Size = new Size(95, 64);
@@ -873,7 +873,7 @@
             // 
             // D
             // 
-            D.BackColor = Color.Transparent;
+            D.BackColor = SystemColors.ActiveBorder;
             D.Location = new Point(9, 297);
             D.Name = "D";
             D.Size = new Size(95, 82);
@@ -883,7 +883,7 @@
             // 
             // C
             // 
-            C.BackColor = Color.Transparent;
+            C.BackColor = SystemColors.ActiveBorder;
             C.Location = new Point(9, 385);
             C.Name = "C";
             C.Size = new Size(95, 82);
@@ -893,7 +893,7 @@
             // 
             // B
             // 
-            B.BackColor = Color.Transparent;
+            B.BackColor = SystemColors.ActiveBorder;
             B.Location = new Point(9, 473);
             B.Name = "B";
             B.Size = new Size(95, 82);
@@ -944,7 +944,7 @@
             // 
             // A
             // 
-            A.BackColor = Color.Transparent;
+            A.BackColor = SystemColors.ActiveBorder;
             A.Location = new Point(9, 561);
             A.Name = "A";
             A.Size = new Size(95, 82);
